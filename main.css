@@ -1,0 +1,137 @@
+/* main.css */
+
+/* 전체 body 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 평안팁 스타일 */
+.tips {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.tipstitle {
+    font-weight: bold;
+}
+
+.tipsmove {
+    animation: moveTips 10s infinite;
+}
+
+@keyframes moveTips {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* 위치 스타일 */
+.location {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 평안이 스타일 */
+.content1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pyeongan, .pyeonganbag {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+/* 날씨 스타일 */
+.weather {
+    display: flex;
+    align-items: center;
+}
+
+.weather img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.weather span {
+    margin-right: 10px;
+}
+
+.cho, .mi {
+    font-weight: bold;
+}
+
+/* 내 주변 안전소식 스타일 */
+.content2 {
+    margin-bottom: 20px;
+}
+
+.mysafecate, .mysafebody {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.mysafecate {
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+
+/* 배너 스타일 */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.banner a {
+    text-decoration: none;
+    color: #333;
+}
+
+.bannerTitle {
+    font-weight: bold;
+}
+
+/* 메뉴 바 스타일 */
+.menubar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.menubar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menubar img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+.menubar p {
+    font-size: 14px;
+    text-align: center;
+}
