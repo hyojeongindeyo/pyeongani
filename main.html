@@ -10,7 +10,9 @@
 <body>
     <div class="container">
         <div class="tips">
-            <p class="tipstitle">오늘의 평안팁</p>
+            <!-- 이미지 불러오기 -->
+            <p class="tipstitle"><img src="file:///C:/icon/tip.png" alt="팁 이미지"></p>
+            <p class="tipstitle">[오늘의 평안팁]</p>
             <p class="tipsmove"> <!--이 부분은 바뀌게 해야함! 랜덤처럼 돌리기-->
                 <span class="text">폭염주의보</span>
                 <span class="text">외출 시 물 챙기기</span>
@@ -18,89 +20,132 @@
         </div>
     </div>
 
+    <!-- JavaScript 추가 -->
+    <script>
+        // 랜덤한 평안 팁을 생성하는 함수
+        function getRandomTips() {
+            var tips = {
+                "폭염주의보": "외출 시 물 챙기기",
+                "한파주의보": "외출 시 옷 따뜻하게 입기",
+                "미세먼지 나쁨": "외출 시 마스크 챙기기",
+                "폭우주의보": "외출 시 우산 챙기기"
+            };
+
+            // 키와 값을 배열로 변환
+            var tipArray = Object.entries(tips);
+
+            // 배열에서 랜덤하게 선택
+            var randomIndex = Math.floor(Math.random() * tipArray.length);
+            return tipArray[randomIndex];
+        }
+
+        // 텍스트 업데이트
+        function updateTips() {
+            var tipElements = document.querySelectorAll('.tipsmove .text');
+
+            // 랜덤한 팁 가져오기
+            var [condition, tip] = getRandomTips();
+
+            // 텍스트 업데이트
+            tipElements[0].textContent = condition;
+            tipElements[1].textContent = tip;
+        }
+
+        // 초기화
+        updateTips();
+
+        // 일정 시간마다 텍스트 업데이트
+        setInterval(updateTips, 10000); // 10초마다 업데이트
+    </script>
+
     <div class="content">
-        <div class="location">서울시 강동구</div> <!--위치-->
+        <div class="location">서울특별시 강동구</div> <!--위치-->
         <div class="content1"> <!--평안이 부분-->
-            <img src="" alt="" class="pyeongan"> <!--평안이 이미지 들어가기-->
-            <button><img src="" alt="" class="pyeonganbag"></button> <!--평안이 가방 이미지 들어가기-->
+            <img src="file:///C:/icon/py.png" alt="평안이 이미지" class="pyeongan"> <!--평안이 이미지 들어가기-->
+            <button><img src="file:///C:/icon/bag.png" alt="가방 이미지" class="pyeonganbag"></button> <!--평안이 가방 이미지 들어가기-->
             <p>ㅇㅇㅇ님의 평안이</p>
+        </div>
             <div class="weather">
-                <img src="" alt=""> <!--날씨 이미지 들어가기(해, 비, 눈 등등등)-->
+                <img src="file:///C:/icon/sun.png" alt="해 이미지"> <!--날씨 이미지 들어가기(해, 비, 눈 등등등)-->
                 <span>38</span> <!--온도-->
                 <span>초미세</span>
                 <span class="cho">나쁨</span> <!--초미세먼지 농도에 따라 바뀜-->
                 <span>미세</span>
                 <span class="mi">좋음</span> <!--미세먼지 농도에 따라 바뀜-->
             </div>
-        </div>
+        <div class="divider"></div>
         <div class="content2"> <!--내 주변 안전소식 부분-->
-            <div title="mysafe"><img src="" alt=""><!--안전소식 이미지-->내 주변 안전소식</div>
+            <div title="mysafe" class="mysafebox">
+                <img src="file:///C:/icon/check.png" alt="체크 이미지"><!--안전소식 이미지-->내 주변 안전소식 >
+            </div> 
             <!--실시간으로 변경하게 됨 업로드 순으로 -> 아니면 약간 좋아요 순 이런 건 어떨지-->
-            <button>
+            <button class="mysafebox">
                 <div class="mysafecate"><b>교통</b></div>
                 <div class="mysafebody">00사거리에서 교통사고~~</div>
             </button>
-            <button>
+            <button class="mysafebox">
                 <div class="mysafecate"><b>시위</b></div>
                 <div class="mysafebody">00근처에서 시위~~</div>
             </button>
-            <button>
+            <button class="mysafebox">
                 <div class="mysafecate"><b>주의</b></div>
                 <div class="mysafebody">갑자기 폭우 쏟아져~~</div>
             </button>
         </div>
+        
 
-        <div class="banner"> <!-- 균열 신고, 대피소 확인, 커뮤니티 -->
-            <a href=""> <!-- 해당 페이지로 이동하기 -->
-                <span class="bannerbody">찰칵! 찍으면 신고까지 딱!</span>
-                <p class="bannerTitle">내 주변 균열 신고하기</p>
-                <img src="" alt="">
-            </a>
-            <a href=""> <!-- 해당 페이지로 이동하기 -->
-                <span class="bannerbody">번거로운 절차 없이 간편하게</span>
-                <p class="bannerTitle">위치 기반 대피소 확인하기</p>
-                <img src="" alt="">
-            </a>
-            <a href=""> <!-- 해당 페이지로 이동하기 -->
-                <span class="bannerbody">뉴스 속보보다 빠르게</span>
-                <p class="bannerTitle">이웃에게 동네 현황 알리기</p>
-                <img src="" alt="">
-            </a>
+        <div class="banner">
+            <div class="slider">
+                <a href="" class="slide"> <!-- 해당 페이지로 이동하기 -->
+                    <span class="bannerbody">찰칵! 찍으면 신고까지 딱!</span>
+                    <p class="bannerTitle">내 주변 균열 신고하기</p>
+                    <img src="file:///C:/icon/crack.png" alt="균열 이미지">
+                </a>
+                <a href="" class="slide"> <!-- 해당 페이지로 이동하기 -->
+                    <span class="bannerbody">번거로운 절차 없이 간편하게</span>
+                    <p class="bannerTitle">위치 기반 대피소 확인하기</p>
+                    <img src="file:///C:/icon/where.png" alt="위치 기반 대피소 이미지">
+                </a>
+                <a href="" class="slide"> <!-- 해당 페이지로 이동하기 -->
+                    <span class="bannerbody">뉴스 속보보다 빠르게</span>
+                    <p class="bannerTitle">이웃에게 동네 현황 알리기</p>
+                    <img src="file:///C:/icon/friend.png" alt="이웃 이미지">
+                </a>
+            </div>
         </div>
-
         <!-- 메뉴 바 -->
         <div class="menubar">
             <div class="home">
-                <a href="">
-                    <img src="" alt=""> <!--홈아이콘-->
+                <a href="main.html">
+                    <img src="file:///C:/icon/home.png" alt="홈 이미지"> <!--홈아이콘-->
                     <p>홈</p>
                 </a>
             </div>
 
             <div class="shelter">
-                <a href="">
-                    <img src="" alt=""> <!--대피소아이콘-->
+                <a href="shelter.html">
+                    <img src="file:///C:/icon/shelter.png" alt="대피소 이미지"> <!--대피소아이콘-->
                     <p>대피소</p>
                 </a>
             </div>
 
             <div class="camera">
-                <a href="">
-                    <img src="" alt=""> <!--카메라아이콘-->
+                <a href="camera.html">
+                    <img src="file:///C:/icon/camera.png" alt="카메라 이미지"> <!--카메라아이콘-->
                     <p>카메라</p>
                 </a>
             </div>
 
             <div class="community">
-                <a href="">
-                    <img src="" alt=""> <!--커뮤니티아이콘-->
+                <a href="community.html">
+                    <img src="file:///C:/icon/talk.png" alt="커뮤니티 이미지"> <!--커뮤니티아이콘-->
                     <p>커뮤니티</p>
                 </a>
             </div>
 
             <div class="mypage">
-                <a href="">
-                    <img src="" alt=""> <!--마이페이지아이콘-->
+                <a href="mypage.html">
+                    <img src="file:///C:/icon/me.png" alt="마이페이지 이미지"> <!--마이페이지아이콘-->
                     <p>내 평안</p>
                 </a>
             </div>
