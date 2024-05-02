@@ -1,0 +1,218 @@
+/* main.css */
+
+/* 전체 body 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* 맨 위 평안팁 중앙정렬 */
+.tips {
+    display: flex;
+    align-items: center;
+}
+
+.tipstitle {
+    margin-right: 20px; /* 이미지와 텍스트 사이의 간격 조절 */
+}
+
+.tipstitle img {
+    width: 100px; /* 이미지의 너비 지정 */
+    height: auto; /* 높이 자동 조정 */
+}
+
+/* 컨테이너 스타일 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 평안팁 스타일 */
+.tips {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px; /* 둥근 모서리 적용 */
+    margin-bottom: 20px;
+}
+
+.tipstitle {
+    font-weight: bold;
+}
+
+.tipsmove {
+    animation: moveTips 10s infinite;
+}
+
+@keyframes moveTips {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* 위치 스타일 */
+.location {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 평안이 스타일 */
+.content1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pyeongan, .pyeonganbag {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+/* 날씨 스타일 */
+.weather {
+    display: flex;
+    align-items: center;
+}
+
+.weather img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.weather span {
+    margin-right: 10px;
+}
+
+.cho, .mi {
+    font-weight: bold;
+}
+
+.divider {
+    height: 2px; /* 바의 높이 */
+    background-color: #ccc; /* 바의 색상 */
+    margin: 20px 0; /* 위아래 여백 */
+}
+
+
+/* 내 주변 안전소식 스타일 */
+.content2 {
+    margin-bottom: 20px;
+}
+
+.mysafebox,
+.banner a {
+    display: flex;
+    width: 90%;
+    border-radius: 10px; /* 둥근 모서리 적용 */
+}
+
+.mysafebox {
+    background-color: #f4f4f4; /* 배경색 추가 */
+}
+
+.banner a {
+    background-color: #333; /* 배경색 추가 */
+    color: #fff; /* 텍스트 색상 추가 */
+}
+
+.mysafecate, .mysafebody,
+.bannerbody, .bannerTitle {
+    flex: 1; /* 요소들이 동일한 너비를 가지도록 함 */
+}
+
+.banner a {
+    text-decoration: none;
+    color: #fff;
+    align-items: center; /* 내용을 수직 중앙 정렬 */
+}
+
+.banner a img {
+    margin-right: 10px; /* 이미지와 텍스트 사이에 여백 추가 */
+}
+
+/* 배너 스타일 */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden; /* 넘치는 컨텐츠를 가리기 위해 overflow 속성 추가 */
+    position: relative; /* 슬라이드 애니메이션을 위해 상대 위치 설정 */
+    margin-bottom: 20px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease; /* 슬라이드 애니메이션 효과 */
+}
+
+.slide {
+    flex: 0 0 auto; /* 슬라이드의 크기를 고정시킵니다. */
+    padding: 0 10px; /* 슬라이드 간 간격을 주기 위해 패딩 추가 */
+    background-color: #556D6A; /* 배너의 배경색 변경 */
+}
+
+.slide:nth-child(2) {
+    background-color: #5A4A3E; /* 두 번째 슬라이드의 배경색 변경 */
+}
+
+.slide:nth-child(3) {
+    background-color: #5E6377; /* 세 번째 슬라이드의 배경색 변경 */
+}
+
+
+.banner a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #556D6A; /* 균열신고 배너색 */
+    padding: 10px 20px; /* 배경색이 적용된 영역을 확실히 하기 위해 내부 여백 추가 */
+    border-radius: 5px; /* 둥근 모서리 적용 */
+}
+
+.banner a img {
+    margin-right: 10px; /* 이미지와 텍스트 사이에 여백 추가 */
+}
+
+/* 커뮤니티 배너 스타일 */
+.banner a.community {
+    background-color: #5E6377; /* 커뮤니티 배너색 */
+}
+
+/* 대피소확인 배너 스타일 */
+.banner a.shelter {
+    background-color: #5A4A3E; /* 대피소확인 배너색 */
+}
+
+/* 메뉴 바 스타일 */
+.menubar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+
+
+.menubar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menubar img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+.menubar p {
+    font-size: 14px;
+    text-align: center;
+}
