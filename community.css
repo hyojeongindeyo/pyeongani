@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* 메뉴 바 스타일 */
 .menubar {
     position: fixed;
@@ -25,7 +24,7 @@
 .menubar p {
     font-size: 14px;
     text-align: center;
-=======
+
 /* 메뉴 바 스타일 */
 .menubar {
     position: fixed;
@@ -52,5 +51,5 @@
 .menubar p {
     font-size: 14px;
     text-align: center;
->>>>>>> 87eb2ac48d7d85794753ae07521796ee47b923e3
+
 }

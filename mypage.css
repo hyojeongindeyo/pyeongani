@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* 회색 바 스타일 */
 .divider {
     width: 100%;
@@ -40,47 +39,4 @@
 .menubar p {
     font-size: 14px;
     text-align: center;
-=======
-/* 회색 바 스타일 */
-.divider {
-    width: 100%;
-    height: 10px;
-    background-color: #f4f4f4;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-/* 중앙 정렬 스타일 */
-.center {
-    text-align: center;
-}
-
-/* 메뉴 바 스타일 */
-.menubar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-}
-
-
-
-.menubar a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.menubar img {
-    width: 30px;
-    height: 30px;
-    display: block;
-    margin: 0 auto;
-}
-
-.menubar p {
-    font-size: 14px;
-    text-align: center;
->>>>>>> 87eb2ac48d7d85794753ae07521796ee47b923e3
 }
